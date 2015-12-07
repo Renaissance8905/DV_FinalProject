@@ -1,0 +1,35 @@
+---
+title: "DV_FinalProject:"
+output: html_document
+---
+
+
+
+## 00. Create/Clone a github repository
+
+
+
+## 01. Create RStudio Project
+
+
+
+## 02. Setup RStudio 
+ Create four folders in RStudio Project:
+- **00 Doc**: where .Rmd, html and graphics live    
+- **01 Data**: where data, csv's will be stored  
+- **03 Tableau Workbooks**: Where visualizations are saved   
+- **04 Shiny**: ui.R and server.R
+
+## 03. Download .CSV Files
+
+
+
+## 04. ETL & Create Table on Database
+
+
+
+## 05. Visualizations  
+
+
+
+## 06. Shiny App for Interesting Visualizations
