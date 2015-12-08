@@ -247,7 +247,13 @@ For **Militarized Disputes** dataset:
 **Comment:** Result shows highest count of dispute length to be for 1 year, and the count decreases significantly as dispute length increases, which is expected and not interesting.
 
 
-### Denominational Dispersions
+
+
+
+
+
+
+## Denominational Dispersions
 
 - I thought it might be interesting, rather than comparing different religions to each other like so many apples and oranges, to compare different sects and denominations within a religion. To start, I laid out the two largest sects of the three largest religions against the "other" subset of that religion, to see how strongly these religions each coalesced into major denominations, like so:
 
@@ -259,10 +265,10 @@ For **Militarized Disputes** dataset:
 
 - When I tried paginating these results by year, something very suprising came to light:
 
-# 1995
+### 1995
 ![](./Graphics/CJS I-SCATTER pre-shift.png) 
 
-# 2000
+### 2000
 ![](./Graphics/CJS I-SCATTER post-shift.png) 
 
 - Where'd all the 'other's go? It would appear from this graph that between 1995 and 2000 an astonishing number of 'other' (unafilliated or less-represented denominations) Muslims became either Sunni or Shiite -- and mostly Sunni, by a large margin.
