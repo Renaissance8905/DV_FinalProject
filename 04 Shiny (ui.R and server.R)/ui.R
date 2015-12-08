@@ -6,11 +6,12 @@ require(shinydashboard)
 require(leaflet)
 
 dashboardPage(
-  dashboardHeader(
+  dashboardHeader(title = "DV_FinalProject: Religions, War and Refugees", titleWidth = 500
   ),
   dashboardSidebar(
     sidebarMenu(
-      menuItem("Quan's Findings", tabName = "quan", icon = icon("th")),
+      menuItem("Quan's Barchart", tabName = "quan1", icon = icon("th")),
+      menuItem("Quan's Scatterplot", tabName = "quan2", icon = icon("th")),
       menuItem("Chris -- Islam", tabName = "Islam", icon = icon("dashboard")),
       menuItem("Chris -- Buddhism", tabName = "Buddhism", icon = icon("dashboard"))
     )
@@ -31,11 +32,15 @@ dashboardPage(
               
               plotOutput("islam_plot")
       ),
-      # QUAN
-      tabItem(tabName = "quan",
+      # QUAN1
+      tabItem(tabName = "quan1",
               sliderInput("animation", "Year:", 1955, 2010, 1955, step = 5, 
                           animate=animationOptions(interval=1000, loop=T)),
               plotOutput("QPlot1")
+      ),
+      # QUAN2
+      tabItem(tabName = "quan2",
+              plotOutput("QPlot2")
       )
       
       
