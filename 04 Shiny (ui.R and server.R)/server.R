@@ -63,7 +63,7 @@ shinyServer(function(input, output) {
     return(buddh_plot)
   })
   
-  ## Quan
+  ## Quan's 2 Viz
   dfQ1 <- data.frame(fromJSON(getURL(URLencode(gsub("\n", " ", 'skipper.cs.utexas.edu:5001/rest/native/?query="""select BUDGEN, YEAR, NAME from RELIGIONS_BY_NATION;"""')), httpheader=c(DB='jdbc:oracle:thin:@sayonara.microlab.cs.utexas.edu:1521:orcl', USER='C##cs329e_cjs2599', PASS='orcl_cjs2599', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE))) 
   
   output$QPlot1 <- renderPlot(width=600, height=500, {
@@ -93,7 +93,6 @@ shinyServer(function(input, output) {
     
     p2
   })
-  
   
   
 })
