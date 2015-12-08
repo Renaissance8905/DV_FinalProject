@@ -7,26 +7,168 @@ output: html_document
 
 ## 00. Create/Clone a github repository
 
-
+![](./Graphics/git.png) 
 
 ## 01. Create RStudio Project
 
-
+![](./Graphics/rproj.png) 
 
 ## 02. Setup RStudio 
- Create four folders in RStudio Project:
-- **00 Doc**: where .Rmd, html and graphics live    
-- **01 Data**: where data, csv's will be stored  
-- **03 Tableau Workbooks**: Where visualizations are saved   
-- **04 Shiny**: ui.R and server.R
+
+ - **00 Doc**: where .Rmd, html and graphics live    
+ - **01 Data**: where data, csv's will be stored  
+ - **03 Tableau Workbooks**: Where visualizations are saved   
+ - **04 Shiny**: ui.R and server.R
 
 ## 03. Download .CSV Files
 
+The three datasets that will be used are:
 
+- **Refugee Stats**: (http://popstats.unhcr.org/)
+
+![](./Graphics/csv1.png) 
+
+
+- **Militarized Disputes**:
+(http://www.correlatesofwar.org/news/mid-data-set-v4-01-available)
+
+![](./Graphics/csv2.png)
+
+
+- **Religions by Nation**: (http://www.correlatesofwar.org/data-sets/world-religion-data)
+
+![](./Graphics/csv3.png) 
+
+The original and reformatted CSV's can be found in **01 Data** folder.
 
 ## 04. ETL & Create Table on Database
 
+- The ETL R scripts are **Refugees_Combined_ETL.r** and **Religion-WRP ETL.r**, both of which can be found in **01 Data** folder.
 
+- Three tables are created in Oracle database:
+
+CREATE TABLE Refugee_Stats (
+ Asylum_Country varchar2(4000),
+ Origin_Country varchar2(4000),
+ Record_Year number(38,4),
+ Refugees number(38,4),
+ Asylum_seekers number(38,4),
+ Returned_Refugees number(38,4),
+ IDPs number(38,4),
+ Returned_IDPs number(38,4),
+ Stateless_persons number(38,4),
+ Others_of_concern number(38,4),
+ Total_Population number(38,4)
+ );
+
+TABLE “MILITARIZED_DISPUTES”
+
+STATE_ABBR	VARCHAR2(4000 BYTE)	Yes		1	
+DISPNUM3	NUMBER(38,4)	Yes		2	
+DISPNUM4	NUMBER(38,4)	Yes		3	
+COUNTRY_CODE	NUMBER(38,4)	Yes		4	
+START_DAY	NUMBER(38,4)	Yes		5	
+START_MON	NUMBER(38,4)	Yes		6	
+START_YEAR	NUMBER(38,4)	Yes		7	
+END_DAY	NUMBER(38,4)	Yes		8	
+END_MON	NUMBER(38,4)	Yes		9	
+END_YEAR	NUMBER(38,4)	Yes		10	
+SIDE_A_BOOL	NUMBER(1,0)	Yes		11	
+REVISIONIST_STATE_BOOL	NUMBER(1,0)	Yes		12	
+REVISION_TYPE2	NUMBER(38,4)	Yes		13	
+REVISION_TYPE1	NUMBER(38,4)	Yes		14	
+FATALITY_LEVEL	NUMBER(38,4)	Yes		15	
+FATALITY_PRECISE	NUMBER(38,4)	Yes		16	
+HIGHEST_ACTION	NUMBER(38,4)	Yes		17	
+HOSTILITY_LEVEL	NUMBER(38,4)	Yes		18	
+ORIGINATOR_BOOL	NUMBER(1,0)	Yes		19	
+
+TABLE “RELIGIONS_BY_NATION”
+
+STATE	VARCHAR2(4000 BYTE)	Yes		1	
+NAME	VARCHAR2(4000 BYTE)	Yes		2	
+DATATYPE	VARCHAR2(4000 BYTE)	Yes		3	
+SOURCERELIAB	VARCHAR2(4000 BYTE)	Yes		4	
+RECRELIAB	VARCHAR2(4000 BYTE)	Yes		5	
+RELIABILEVEL	VARCHAR2(4000 BYTE)	Yes		6	
+VERSION	VARCHAR2(4000 BYTE)	Yes		7	
+SOURCECODE	VARCHAR2(4000 BYTE)	Yes		8	
+YEAR	NUMBER(38,4)	Yes		9	
+CHRSTPROT	NUMBER(38,4)	Yes		10	
+CHRSTCAT	NUMBER(38,4)	Yes		11	
+CHRSTORTH	NUMBER(38,4)	Yes		12	
+CHRSTANG	NUMBER(38,4)	Yes		13	
+CHRSTOTHR	NUMBER(38,4)	Yes		14	
+CHRSTGEN	NUMBER(38,4)	Yes		15	
+JUDORTH	NUMBER(38,4)	Yes		16	
+JDCONS	NUMBER(38,4)	Yes		17	
+JUDREF	NUMBER(38,4)	Yes		18	
+JUDOTHR	NUMBER(38,4)	Yes		19	
+JUDGEN	NUMBER(38,4)	Yes		20	
+ISLMSUN	NUMBER(38,4)	Yes		21	
+ISLMSHI	NUMBER(38,4)	Yes		22	
+ISLMIBD	NUMBER(38,4)	Yes		23	
+ISLMNAT	NUMBER(38,4)	Yes		24	
+ISLMALW	NUMBER(38,4)	Yes		25	
+ISLMAHM	NUMBER(38,4)	Yes		26	
+ISLMOTHR	NUMBER(38,4)	Yes		27	
+ISLMGEN	NUMBER(38,4)	Yes		28	
+BUDMAH	NUMBER(38,4)	Yes		29	
+BUDTHR	NUMBER(38,4)	Yes		30	
+BUDOTHR	NUMBER(38,4)	Yes		31	
+BUDGEN	NUMBER(38,4)	Yes		32	
+ZOROGEN	NUMBER(38,4)	Yes		33	
+HINDGEN	NUMBER(38,4)	Yes		34	
+SIKHGEN	NUMBER(38,4)	Yes		35	
+SHNTGEN	NUMBER(38,4)	Yes		36	
+BAHGEN	NUMBER(38,4)	Yes		37	
+TAOGEN	NUMBER(38,4)	Yes		38	
+JAINGEN	NUMBER(38,4)	Yes		39	
+CONFGEN	NUMBER(38,4)	Yes		40	
+SYNCGEN	NUMBER(38,4)	Yes		41	
+ANMGEN	NUMBER(38,4)	Yes		42	
+NONRELIG	NUMBER(38,4)	Yes		43	
+OTHRGEN	NUMBER(38,4)	Yes		44	
+SUMRELIG	NUMBER(38,4)	Yes		45	
+POP	NUMBER(38,4)	Yes		46	
+CHRSTPROTPCT	NUMBER(38,4)	Yes		47	
+CHRSTCATPCT	NUMBER(38,4)	Yes		48	
+CHRSTORTHPCT	NUMBER(38,4)	Yes		49	
+CHRSTANGPCT	NUMBER(38,4)	Yes		50	
+CHRSTOTHRPCT	NUMBER(38,4)	Yes		51	
+CHRSTGENPCT	NUMBER(38,4)	Yes		52	
+JUDORTHPCT	NUMBER(38,4)	Yes		53	
+JUDCONSPCT	NUMBER(38,4)	Yes		54	
+JUDREFPCT	NUMBER(38,4)	Yes		55	
+JUDOTHRPCT	NUMBER(38,4)	Yes		56	
+JUDGENPCT	NUMBER(38,4)	Yes		57	
+ISLMSUNPCT	NUMBER(38,4)	Yes		58	
+ISLMSHIPCT	NUMBER(38,4)	Yes		59	
+ISLMIBDPCT	NUMBER(38,4)	Yes		60	
+ISLMNATPCT	NUMBER(38,4)	Yes		61	
+ISLMALWPCT	NUMBER(38,4)	Yes		62	
+ISLMAHMPCT	NUMBER(38,4)	Yes		63	
+ISLMOTHRPCT	NUMBER(38,4)	Yes		64	
+ISLMGENPCT	NUMBER(38,4)	Yes		65	
+BUDMAHPCT	NUMBER(38,4)	Yes		66	
+BUDTHRPCT	NUMBER(38,4)	Yes		67	
+BUDOTHRPCT	NUMBER(38,4)	Yes		68	
+BUDGENPCT	NUMBER(38,4)	Yes		69	
+ZOROGENPCT	NUMBER(38,4)	Yes		70	
+HINDGENPCT	NUMBER(38,4)	Yes		71	
+SIKHGENPCT	NUMBER(38,4)	Yes		72	
+SHNTGENPCT	NUMBER(38,4)	Yes		73	
+BAHGENPCT	NUMBER(38,4)	Yes		74	
+TAOGENPCT	NUMBER(38,4)	Yes		75	
+JAINGENPCT	NUMBER(38,4)	Yes		76	
+CONFGENPCT	NUMBER(38,4)	Yes		77	
+SYNCGENPCT	NUMBER(38,4)	Yes		78	
+ANMGENPCT	NUMBER(38,4)	Yes		79	
+NONRELIGPCT	NUMBER(38,4)	Yes		80	
+OTHRGENPCT	NUMBER(38,4)	Yes		81	
+SUMRELIGPCT	NUMBER(38,4)	Yes		82	
+TOTAL	NUMBER(38,4)	Yes		83	
+DUALRELIG	NUMBER(38,4)	Yes		84	
 
 ## 05. Visualizations  
 
