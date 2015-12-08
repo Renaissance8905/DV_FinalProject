@@ -206,6 +206,7 @@ For **Religions by Nation** dataset:
 
 - Choose Name's Geographic Role as Country/Region, then Add to Sheet
 - Filter by Nonreligpct to be at least 15% (eliminating insignificant data)
+- Put Year in Pages to create a timeline slider
 - For Marks, put Name into Color as labeling, and Nonreligpct into Label for showing values
 
 ![](./Graphics/Quan4.png)
@@ -219,6 +220,30 @@ For **Religions by Nation** dataset:
 
 **Interesting Findings:**
 
--	The behavior of nonreligious percentage in Czechoslovakia, Finland, 
+-	The behavior of nonreligious percentage in Czechoslovakia, Finland, and USA are considered normal. Thus, they are showned just for comparison.
+
+- The interesting behaviors are in countries that have an abrupt change in trend, or a sudden increase/decrease in nonreligious percentage of at least 10%.
+
+- Russia: sudden drop from 63% in 1995 to 12% in 2000.
+
+- North Korea: 79% in 1995 to 64% in 2000.
+
+- Jamaica: downward slope from 1960-1980, but a sharp turn upwards to 1990 and then gradual decrease.
+
+- Cuba: sharp increase from 0% in 1965 to 25% in 1970.
+
+- China: sharp increase in period 1945-1960.
+
+#### C. Start with a green thing in aggregated mode and make a histogram ####
+
+For **Militarized Disputes** dataset: 
+
+- Create a calculated field named Dispute Length = [End Year] - [Start Year] + 1
+- Choose Histogram in Show Me
+- In Dimensions, choose to edit Dispute Length (bin) and change bin size to 1
+
+![](./Graphics/Quan6.png)
+
+**Comment:** Result shows highest count of dispute length to be for 1 year, and the count decreases significantly as dispute length increases, which is expected and not interesting.
 
 ## 06. Shiny App for Interesting Visualizations
