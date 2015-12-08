@@ -299,3 +299,5 @@ For **Militarized Disputes** dataset:
 
 
 ## 06. Shiny App for Interesting Visualizations
+
+https://renaissance8905.shinyapps.io/War_And_Pear
