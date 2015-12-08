@@ -1,5 +1,5 @@
 ---
-title: "DV_FinalProject:"
+title: "DV_FinalProject: **RELIGIONS, WAR & REFUGEES**"
 output: html_document
 ---
 
@@ -172,6 +172,53 @@ DUALRELIG	NUMBER(38,4)	Yes		84
 
 ## 05. Visualizations  
 
+### Quan's Stories ###
 
+#### A. Start with a green thing in non-aggregated mode and make a boxplot ####
+
+For **Religions by Nation** dataset: 
+
+- Put Name into Columns
+- Put Budgen into Rows
+- Choose Boxplot in Show Me
+
+![](./Graphics/Quan1.png)
+
+- Make a new barchart: put Name into Columns, Budgen into Rows
+- Pick out interesting countries (filtering by Name as CHN, DRV, JPN, MYA, THI)
+- Filter by Year greater than or equal to 1955 (to eliminate null values)
+- Put Year in Pages to create a timeline slider
+- Put Name in Marks as Color for labeling
+
+![](./Graphics/Quan2.png) 
+
+**Interesting Findings:**
+
+-	China vs Japan: Even though China and Japan has a striking difference in total population, for the early period (1945 – 1970), their Buddhist population was comparable (with Japan’s being little higher). However, from 1970 onwards, Buddhist population in China increased markedly and steadily, outstripping Japan completely.
+
+-	The interesting point about China’s increase is that even though it was rapid, there was a sudden drop (by no less than 50%) between 1995 and 2000, followed by a sudden comeback and plateau right in 2005.
+
+-	For Vietnam, after long period of slow but steady increase in Buddhist population between 1955-1995, there appears a sharp increase and plateau in 2000 (from 6.5M to 40M between 1995 and 2000).
+
+#### B. Start with two green things and a map ####
+
+For **Religions by Nation** dataset: 
+
+- Choose Name's Geographic Role as Country/Region, then Add to Sheet
+- Filter by Nonreligpct to be at least 15% (eliminating insignificant data)
+- For Marks, put Name into Color as labeling, and Nonreligpct into Label for showing values
+
+![](./Graphics/Quan4.png)
+
+- Create a new scatterplot: put Year into Columns and Nonreligpct into Rows
+- Put Name into Columns for different facets
+- Pick out interesting countries (filtering by Name as CHN, CUB, CZE, FIN, JAM, PRK, RUS, USA)
+- Put Name into Color in Marks for labeling
+
+![](./Graphics/Quan5.png)
+
+**Interesting Findings:**
+
+-	The behavior of nonreligious percentage in Czechoslovakia, Finland, 
 
 ## 06. Shiny App for Interesting Visualizations
