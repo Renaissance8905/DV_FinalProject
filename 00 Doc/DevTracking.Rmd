@@ -174,4 +174,50 @@ DUALRELIG	NUMBER(38,4)	Yes		84
 
 
 
+
+### Denominational Dispersions
+
+- I thought it might be interesting, rather than comparing different religions to each other like so many apples and oranges, to compare different sects and denominations within a religion. To start, I laid out the two largest sects of the three largest religions against the "other" subset of that religion, to see how strongly these religions each coalesced into major denominations, like so:
+
+![](./Graphics/CJS C-SCATTER.png) 
+![](./Graphics/CJS B-SCATTER.png) 
+![](./Graphics/CJS I-SCATTER.png) 
+
+- From this you can see that while populations often split comfortably across Protestant or Catholic and others, they either ascribe to one the major Buddhist and Islamic sects entirely or not at all.
+
+- When I tried paginating these results by year, something very suprising came to light:
+
+# 1995
+![](./Graphics/CJS I-SCATTER pre-shift.png) 
+
+# 2000
+![](./Graphics/CJS I-SCATTER post-shift.png) 
+
+- Where'd all the 'other's go? It would appear from this graph that between 1995 and 2000 an astonishing number of 'other' (unafilliated or less-represented denominations) Muslims became either Sunni or Shiite -- and mostly Sunni, by a large margin.
+
+- I decided to delve further, and look at each country individually. There, a pattern emerged, as you can see below:
+
+![](./Graphics/CJS PAKISTAN EX.png)
+
+- This is not a universal pattern, but you'll see that more than 40 countries show a near-total reorganization of their Muslim population into Sunni/Shiite between 1995 and 2000.
+
+- And if that's not odd enough, 6 Buddhist countries show the same reorganization:
+
+![](./Graphics/CJS LAOS EX.png)
+
+- Perhaps this was a regional shift? Let's check:
+
+![](./Graphics/CJS ISLAM MAP.png)
+
+![](./Graphics/CJS BUDDHISM MAP.png) 
+
+- Nope! There's a moderate geographic correlation with the Buddhist shift, but with two major outliers (33% of the shift), and there's no regional correlation at all with the Islamic shift.
+
+- I found myself trawling Wikipedia and world news articles for major events in the Muslim and Buddhist worlds, but that quickly delved to the deepest reaches of conjecture. All we can say for sure from this data is: something massively significant happened in these two religious communities in the last half of the 90's.
+
+
+
+
+
+
 ## 06. Shiny App for Interesting Visualizations
