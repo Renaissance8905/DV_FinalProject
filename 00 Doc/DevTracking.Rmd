@@ -293,7 +293,88 @@ For **Militarized Disputes** dataset:
 
 - I found myself trawling Wikipedia and world news articles for major events in the Muslim and Buddhist worlds, but that quickly delved to the deepest reaches of conjecture. All we can say for sure from this data is: something massively significant happened in these two religious communities in the last half of the 90's.
 
+### War and those who flee it ###
 
+Started with the **Military Disputes** dataset.
+
+Wanted to take a look at the military disputes data. A couple key terms...
+
+![](./Graphics/James01.png)  
+
+![](./Graphics/James02.png)  
+
+![](./Graphics/James03.png)  
+
+![](./Graphics/James04.png)  
+
+
+Made a crosstab to look at the different disputes.   
+- To get country names, blended data with a dataset that connected country abbreviations to their full name.  
+
+The military dispute dataset.  
+![](./Graphics/James05.png)  
+
+Okay, so can we correlate this data to the refugee movement out of these countries to see if we find any trends?  
+
+-The Refugee dataset.  
+![](./Graphics/JamesXX.png) 
+
+Looking for trends...
+Method:  
+- Inner join on our refugee data and the military dispute data.  
+- Cross tab, using the KPI of percentage of a country's population that moved out of country as refugees in the same year as a dispute.   
+
+![](./Graphics/James06.png)  
+
+![](./Graphics/James07.png)  
+
+
+- Unfortunatly, there doesn't seem to be a great many intersting trends. The data is terribly convaluted... What if we look by country, instead of by dispute number?
+
+![](./Graphics/James08.png) 
+
+![](./Graphics/China.png) 
+
+
+- So still not many trends, but the data China is interesting. A novice mistake would be to say that these conflicts created over a million refugees. BUT, we must remember that this is refugees in the same year as the conflict, not due to the conflict itself!
+
+- As it turns out, some of these conflicts that are rated as "Wars", actually only lasted one day! But, its still interesting that China had over a million refugees that year...
+
+
+
+So lets look at China, decade by decade...
+
+Method:  
+- Filter by years and State name.    
+- Include a term to track the number of conflicts through the decade.  
+
+
+#### 1960-1969
+![](./Graphics/James09.png) 
+
+- Look at all those refugees! So what is happening? As it turns out, these years correlate exactly to the Cultural Revolution. It seems likely that these "refugees" are actually just displaced populuce  combined with a flight out of an increasingly restrictive regeim.  
+
+#### 1970-1979
+![](./Graphics/James10.png) 
+
+- A very quiet decade. I suspect that a problem with the joins caused so few disputes to show up. Still a decent ammount of refugees, but nothing compared to what we saw earlier.  
+
+#### 1980-1989
+![](./Graphics/James11.png)  
+
+- In the 1980's we see an increasing number of conflicts, but almost no refugees whatsoever! We also notice that a great many of the conflicts are "Revisionist" conflicts: basically small civil "wars" or revolutions.  
+
+#### 1990-1991
+![](./Graphics/James12.png) 
+
+- Now we see a huge change in 1993! A huge increase in the number of refugees to nearly one-hundred thousand per year. The conflicts weren't particularly deadly, and only about half of them were revisionist. This trend continues until 2008, the end of our data...  
+
+#### 2000-2008
+![](./Graphics/James13.png) 
+
+- The trend starting in the 1990's continues, and we reach the end of our data.
+
+=======
 
 
 
